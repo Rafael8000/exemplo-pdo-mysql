@@ -1,5 +1,5 @@
 <?php
-require_once './vendor/autoload.php';
+require_once './vendor/composer/autoload.php';
 USE PDO;
 
 $bd = new PDO ('mysql:host=localhost;dbname=giraffa', 'root', '');
