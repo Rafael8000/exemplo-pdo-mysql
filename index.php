@@ -25,8 +25,8 @@ $generos = $comando ->fetchALL(PDO::FETCH_ASSOC);
 </tr>
 <?php  foreach($generos as $g): ?>
     <tr>
-        <td> <? $g['Id'] ?> </td>
-        <td> <? $g['Nome'] ?></td>
+        <td> <? $g['id'] ?> </td>
+        <td> <? $g['nome'] ?></td>
         <tr>
             <?php endforeach ?>
 </table>
