@@ -1,5 +1,5 @@
 <?php
-require_once './vendor/composer/autoload.php';
+require_once './vendor/autoload.php';
 USE PDO;
 
 $bd = new PDO ('mysql:host=localhost;dbname=giraffa', 'root', '');
@@ -25,8 +25,8 @@ $generos = $comando ->fetchALL(PDO::FETCH_ASSOC);
 </tr>
 <?php  foreach($generos as $g): ?>
     <tr>
-        <td> <? $g['id'] ?> </td>
-        <td> <? $g['nome'] ?></td>
+        <td> <?= $g['id'] ?> </td>
+        <td> <?= $g['nome'] ?></td>
         <tr>
             <?php endforeach ?>
 </table>
