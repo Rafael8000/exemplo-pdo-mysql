@@ -1,8 +1,8 @@
 <?php
 require_once './vendor/autoload.php';
-USE PDO;
+USE ExemploPDOMySQL\MySQLConnection;
 
-$bd = new PDO ('mysql:host=localhost;dbname=giraffa', 'root', '');
+$bd = new MySQLConnection ();
 
 $comando = $bd ->prepare('SELECT * FROM generos ');
 $comando -> execute();
@@ -18,6 +18,7 @@ $generos = $comando ->fetchALL(PDO::FETCH_ASSOC);
     <title>Giraffa</title>
 </head>
 <body>
+    <a href = "insert.php"> Novo Gênero </a>
     <table>
         <tr>
             <th>Id</th>
